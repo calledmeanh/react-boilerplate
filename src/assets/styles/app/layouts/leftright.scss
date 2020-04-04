@@ -1,0 +1,42 @@
+.left-right-layout {
+  &.ant-layout {
+    min-height: 100vh;
+  }
+  & > .ant-layout-sider {
+    position: relative;
+    & > .ant-layout-sider-children {
+      & > .logo {
+        height: 32px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px;
+      }
+      & > .ant-menu > .ant-menu-item {
+        margin-top: 0;
+        & > .icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+      }
+    }
+    & > .ant-layout-sider-trigger {
+      position: absolute;
+    }
+  }
+  & > .ant-layout {
+    & > .ant-layout-header {
+      background: #fff;
+      border: 1px solid #f3f5f9;
+    }
+    & > .ant-layout-content {
+      padding: 10px 50px 0 50px;
+    }
+    & > .ant-layout-footer {
+      text-align: center;
+      background: #fff;
+      border: 1px solid #f3f5f9;
+      height: 48px;
+      padding: 2px 50px;
+    }
+  }
+}

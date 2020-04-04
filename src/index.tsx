@@ -1,12 +1,33 @@
+/* libs */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import viVN from 'antd/es/locale/vi_VN';
+import 'antd/dist/antd.css';
+/* apps */
+import App from './app/App';
+import './assets/styles/index.scss';
+import configureStore from './app/redux/index';
+import TopBottomLayout from './app/layouts/topbottom.layout';
+import LeftRightLayout from './app/layouts/leftright.layout';
 import * as serviceWorker from './serviceWorker';
-
+import { ConfigProvider } from 'antd';
+const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <BrowserRouter>
+        <ConfigProvider locale={viVN}>
+          <App>
+            <h1 style={{ textAlign: 'center' }}>Top Bottom Layout Structure</h1>
+            <TopBottomLayout />
+            <h1 style={{ textAlign: 'center' }}>Left Right Layout Structure</h1>
+            <LeftRightLayout />
+          </App>
+        </ConfigProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

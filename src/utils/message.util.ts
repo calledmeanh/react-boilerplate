@@ -1,0 +1,11 @@
+export const errorMessage = {
+  BASE: 'ERROR',
+  CONNECTION: 'BAD CONNECTION',
+  IMAGE_TYPE: 'SUPPORT ONLY PNG-JPEG-JPG-GIF TYPE',
+  IMAGE_SIZE: 'SUPPORT ONLY FILE SIZE LESS THAN 1MB',
+};
+
+export const successMessage = {
+  BASE: 'SUCCESS',
+  CONNECTION: 'GOOD CONNECTION',
+};
