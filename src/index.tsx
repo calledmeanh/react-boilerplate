@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ConfigProvider } from 'antd';
 import viVN from 'antd/es/locale/vi_VN';
 import 'antd/dist/antd.css';
 /* apps */
@@ -12,7 +13,6 @@ import configureStore from './app/redux/index';
 import TopBottomLayout from './app/layouts/topbottom.layout';
 import LeftRightLayout from './app/layouts/leftright.layout';
 import * as serviceWorker from './serviceWorker';
-import { ConfigProvider } from 'antd';
 const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
