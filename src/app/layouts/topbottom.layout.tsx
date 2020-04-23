@@ -1,14 +1,25 @@
 /* libs */
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { Layout } from 'antd';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { withTranslation } from "react-i18next";
+import { i18n } from "i18next";
+import { Layout } from "antd";
 /* apps */
-import ExampleContainer from '../containers/example.con';
+import ExampleContainer from "../containers/example.con";
 
 const { Header, Footer, Content } = Layout;
 
-class TopBottomLayout extends React.Component {
+declare module TopBottomLayoutModule {
+  export type Props = {
+    t: any;
+    tReady: any;
+    i18n: i18n;
+  };
+}
+
+class TopBottomLayout extends React.Component<TopBottomLayoutModule.Props> {
   render() {
+    this.props.i18n.changeLanguage('vi'); // change language (vi, en)
     return (
       <Layout className="top-bottom-layout">
         <Header>Header</Header>
@@ -19,11 +30,13 @@ class TopBottomLayout extends React.Component {
         </Content>
         <Footer>
           Ant Design ©2018 Created by Ant UED <br />
-          Customized by Hoang Anh
+          Customized by Hoang Anh <br />
+          {this.props.t("test")} <br />
+          {this.props.t("home").title}
         </Footer>
       </Layout>
     );
   }
 }
 
-export default TopBottomLayout;
+export default withTranslation()(TopBottomLayout);
