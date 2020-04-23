@@ -1,0 +1,18 @@
+{
+  "en": {
+    "translation": {
+      "test": "This is a test",
+      "home": {
+        "title": "This is a title"
+      }
+    }
+  },
+  "vi": {
+    "translation": {
+      "test": "Đây là bản thử",
+      "home": {
+        "title": "Đây là title"
+      }
+    }
+  }
+}
