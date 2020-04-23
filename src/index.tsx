@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import './i18n/index.i18n';
 import { Provider } from 'react-redux';
 import { ConfigProvider } from 'antd';
 import viVN from 'antd/es/locale/vi_VN';
