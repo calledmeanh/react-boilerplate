@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { createActions } from 'redux-actions';
 import { AxiosRequestConfig } from 'axios';
 /* apps */
-import RootState from '../../../models/rootState.model';
+import RootState from '../../../models/root_state.model';
 import apiUtil from '../../../utils/api.util';
 
 export const loadExampleActions = createActions({

@@ -20,14 +20,11 @@ Before you start, take a moment to see how the project structure looks like:
 ├── /public/                            # Static files
 ├── /src/                               # The source code of the application
 │   ├── /app/                           # Where you store your React components
-│       ├── /commons/                       # Reusable components (<Button/>, <Nav/>,...)
-│       ├── /components/                    # Dump components (take props and render UI)
-│       ├── /containers/                    # Smart components (call api)
-│       ├── /hocs/                          # High Order Components
+│       ├── /components/                    # Reusable components manage their own
+│           ├── /commons/                   # Reusable components (<Button/>, <Nav/>,...)
+│           ├── /layouts/                       # Layout Structures (top-bottom, lef-right)
+│       ├── /containers/                    # Smart components (call api, manage state)
 │       ├── /hooks/                         # Hook Components
-│       ├── /layouts/                       # Layout Structures (top-bottom, lef-right)
-│       ├── /motions/                       # Motions components
-|       ├── /motions/                       # Motions components
 │       ├── /redux/                         # Integrated Redux
 │       ├── /App.tsx                        # Root file for React Components
 │   ├── /assets/                        # Where you store your fonts, images, styles (scss)
@@ -36,6 +33,9 @@ Before you start, take a moment to see how the project structure looks like:
 │   ├── /models/                        # Where you store your component models for the application
 │   ├── /routes/                        # Where you store the whole route for the application
 │   ├── /utils/                         # Where you store your helper functions
+│   ├── /constants/                     # Where you store your constants
+│   ├── /services/                      # Where you store your functions request api
+│   ├── /mocks/                         # Where you store your mock data
 │   ├── index.tsx                       # Root file
 ├── ...
 ```

@@ -2,7 +2,7 @@
 import { handleActions, combineActions } from 'redux-actions';
 /* apps */
 import { loadExampleActions } from '../actions/example.action';
-import { AppState } from '../../../models/rootState.model';
+import { AppState } from '../../../models/root_state.model';
 import ExampleModel from '../../../models/example.model';
 
 let exampleState: AppState.BaseState<ExampleModel> = {
